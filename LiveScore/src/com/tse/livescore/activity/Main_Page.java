@@ -1,6 +1,5 @@
 package com.tse.livescore.activity;
 
-import java.util.ArrayList;
 
 import org.json.JSONException;
 import com.tse.livescore.util.GetLives;
@@ -8,15 +7,16 @@ import com.tse.livescore.util.GetLives;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TabHost;
-import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class Main_Page extends Activity {
@@ -71,6 +71,12 @@ public class Main_Page extends Activity {
 			listView_basketball.setAdapter(arrayAdapter_basketball);
 			setOnItemClickListener(listView_basketball,3);
 			
+			if(lives.getListeSport(1)!=null){
+				Toast.makeText(this, "加载成功", Toast.LENGTH_LONG).show();
+			}else{
+				Toast.makeText(this, "加载失败", Toast.LENGTH_LONG).show();
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -95,12 +101,43 @@ public class Main_Page extends Activity {
 			});
 	}
 
+	protected static final int MENU_ABOUT = Menu.FIRST;
+	protected static final int MENU_Quit = Menu.FIRST + 1;
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main__page, menu);
+		super.onCreateOptionsMenu(menu);
+		menu.add(0, MENU_ABOUT, 0, "About...");
+		menu.add(0, MENU_Quit, 0, "End");
 		return true;
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+			case MENU_ABOUT:
+				openOptionsDialog();
+				break;
+			case MENU_Quit :
+				finish();
+				break;
+		}
+		return true;
+	}
+	
+	private void openOptionsDialog() {
+		
+		new AlertDialog.Builder(this).setTitle(R.string.about_title)
+		.setMessage(R.string.about_msg)
+		.setPositiveButton("确认",
+				new DialogInterface.OnClickListener(){
+					@Override
+					public void onClick(DialogInterface dialog, int which){
+						// TODO Auto-generated method stub
+					}
+			}).show();
+	}
 	
 }
