@@ -40,6 +40,10 @@
             android:name="com.tse.livescore.activity.MyTabListener"
             android:label="@string/title_activity_my_tab_listener" >
         </activity>
+        <activity
+            android:name="com.tse.livescore.activity.Tab_Page"
+            android:label="@string/title_activity_tab__page" >
+        </activity>
     </application>
 
 </manifest>

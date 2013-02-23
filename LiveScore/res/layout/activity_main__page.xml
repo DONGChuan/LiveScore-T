@@ -3,38 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Main_Page" >
- <ScrollView>
-	<LinearLayout
-	    android:orientation="horizontal"
-	    android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-	>
-	    <Button android:id="@+id/list"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:text="@string/list"
-			/>
-	    <Button android:id="@+id/search"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:text="@string/search"
-			/>
-	    <Button android:id="@+id/add"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:text="@string/add"
-			/>
-	    <Button android:id="@+id/update"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:text="@string/update"
-			/>
-	</LinearLayout>	
+    tools:context=".Main_Page"
+    >
+    
+	
 	
     <LinearLayout
 	    android:orientation="vertical"
@@ -78,5 +50,5 @@
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"/>
  	</LinearLayout>
-	   </ScrollView> 
+	    
 </LinearLayout>

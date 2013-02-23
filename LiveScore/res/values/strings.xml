@@ -9,5 +9,6 @@
     <string name="title_activity_list_view_loader">ListViewLoader</string>
     <string name="title_activity_detail__live__page">Detail_Live_Page</string>
     <string name="title_activity_my_tab_listener">MyTabListener</string>
+    <string name="title_activity_tab__page">Tab_Page</string>
 
 </resources>

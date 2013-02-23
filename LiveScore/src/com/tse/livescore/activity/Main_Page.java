@@ -3,18 +3,19 @@ package com.tse.livescore.activity;
 import java.util.ArrayList;
 
 import org.json.JSONException;
-
 import com.tse.livescore.util.GetLives;
 
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.app.Activity;
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -44,10 +45,8 @@ public class Main_Page extends Activity {
 		.build());
 		
 		findViews();
-		setList();
-				
+		setList();			
 	}
-
 
 	private void findViews() {
 		listView_football =(ListView) this.findViewById(R.id.football_listview);

@@ -15,7 +15,7 @@ public class Launch_Page extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_launch__page);
 		
-		final Intent it = new Intent(this, Main_Page.class); //你要转向的Activity
+		final Intent it = new Intent(this, Tab_Page.class); //你要转向的Activity
 		  
 		Timer timer = new Timer();
 		TimerTask task = new TimerTask() {
