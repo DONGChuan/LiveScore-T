@@ -8,5 +8,8 @@
     <string name="about_title" >About LiveScore</string>
 	<string name="about_msg" >Android LiveScore\n
 	DONG Chuan gasolin\n\n gasolin+android [at] dongchuan55@gmail.com</string>
+	
+	<string name="warning" >Warning : </string>
+	<string name="internet_error" >No internet!</string>
 
 </resources>

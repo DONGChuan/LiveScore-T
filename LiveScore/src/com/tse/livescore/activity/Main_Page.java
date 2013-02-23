@@ -3,6 +3,7 @@ package com.tse.livescore.activity;
 
 import org.json.JSONException;
 import com.tse.livescore.util.GetLives;
+import com.tse.livescore.util.checkInternet;
 
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -44,8 +45,21 @@ public class Main_Page extends Activity {
 		.penaltyDeath()
 		.build());
 		
-		findViews();
-		setList();			
+		//if(checkInternet.isNetworkAvailable(this)){
+			findViews();
+			setList();	
+		/*}else{
+			new AlertDialog.Builder(this).setTitle(R.string.warning)
+			.setMessage(R.string.internet_error)
+			.setPositiveButton("Ok",
+					new DialogInterface.OnClickListener(){
+						@Override
+						public void onClick(DialogInterface dialog, int which){
+							// TODO Auto-generated method stub
+						}
+				}).show();
+		}*/
+				
 	}
 
 	private void findViews() {
@@ -71,11 +85,8 @@ public class Main_Page extends Activity {
 			listView_basketball.setAdapter(arrayAdapter_basketball);
 			setOnItemClickListener(listView_basketball,3);
 			
-			if(lives.getListeSport(1)!=null){
-				Toast.makeText(this, "加载成功", Toast.LENGTH_LONG).show();
-			}else{
-				Toast.makeText(this, "加载失败", Toast.LENGTH_LONG).show();
-			}
+			Toast.makeText(this, "加载成功", Toast.LENGTH_LONG).show();
+
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -131,7 +142,7 @@ public class Main_Page extends Activity {
 		
 		new AlertDialog.Builder(this).setTitle(R.string.about_title)
 		.setMessage(R.string.about_msg)
-		.setPositiveButton("确认",
+		.setPositiveButton("Ok",
 				new DialogInterface.OnClickListener(){
 					@Override
 					public void onClick(DialogInterface dialog, int which){
