@@ -3,12 +3,12 @@
 
     <string name="app_name">LiveScore</string>
     <string name="hello_world">Hello world!</string>
-    <string name="hell_world">Hello worldaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!</string>
+    <string name="hell_world">加封面</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main__page">Main_Page</string>
     <string name="title_activity_list_view_loader">ListViewLoader</string>
     <string name="title_activity_detail__live__page">Detail_Live_Page</string>
     <string name="title_activity_my_tab_listener">MyTabListener</string>
-    <string name="title_activity_tab__page">Tab_Page</string>
+    <string name="title_activity_tab__page">Live Score</string>
 
 </resources>
