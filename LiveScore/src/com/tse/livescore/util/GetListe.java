@@ -21,6 +21,14 @@ public class GetListe {
 		return jsonArray.length();
 	}
 	
+	public String getScoreEquipe1(int i) throws JSONException{
+		return jsonArray.getJSONObject(i).getString("scoreEquipe1");
+	}
+	
+	public String getScoreEquipe2(int i) throws JSONException{
+		return jsonArray.getJSONObject(i).getString("scoreEquipe2");
+	}
+	
 	public String getNom(int i) throws JSONException{
 		return jsonArray.getJSONObject(i).getString("nom");
 	}
@@ -40,10 +48,18 @@ public class GetListe {
 	public List<String> getListeSport(int ID) throws JSONException{
 		
 		ArrayList<String> list=new ArrayList<String>();
+		String a = null ;
 		
 		for(int i=0;i<size();i++){
-			if(jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id") == ID )	
-				list.add(getNom(i));
+			if(jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id") == ID )	{
+				a = getNom(i);
+				for(int i1=0;i1<15-getNom(i).length();i1++){
+					a+=">";
+				}
+				a+= getScoreEquipe1(i) + ":"+ getScoreEquipe2(i);
+				list.add(a);
+			}
+				
 		}
 		return list;
 	}
