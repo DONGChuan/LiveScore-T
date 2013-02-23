@@ -4,7 +4,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Main_Page" >
-
+<LinearLayout>
+    <Button android:id="@+id/list"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:text="@string/list"
+		/>
+    <Button android:id="@+id/search"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:text="@string/search"
+		/>
+    <Button android:id="@+id/add"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:text="@string/add"
+		/>
+    <Button android:id="@+id/update"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:text="@string/update"
+		/>
+</LinearLayout>	
+    
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
