@@ -110,16 +110,18 @@ public class Main_Page extends Activity {
 				}
 			});
 	}
-
-	protected static final int MENU_ABOUT = Menu.FIRST;
+	
+	protected static final int MENU_Update = Menu.FIRST;
 	protected static final int MENU_Quit = Menu.FIRST + 1;
+	protected static final int MENU_ABOUT = Menu.FIRST + 2;
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, MENU_ABOUT, 0, "About...");
+		menu.add(0, MENU_Update, 0, "Fresh");
 		menu.add(0, MENU_Quit, 0, "End");
+		menu.add(0, MENU_ABOUT, 0, "About...");
 		return true;
 	}
 	
@@ -132,6 +134,9 @@ public class Main_Page extends Activity {
 				break;
 			case MENU_Quit :
 				finish();
+				break;
+			case MENU_Update :
+				update();
 				break;
 		}
 		return true;
@@ -148,6 +153,11 @@ public class Main_Page extends Activity {
 						// TODO Auto-generated method stub
 					}
 			}).show();
+	}
+	
+	private void update(){
+		setList();
+		Toast.makeText(this, "更新成功", Toast.LENGTH_LONG).show();
 	}
 	
 }
