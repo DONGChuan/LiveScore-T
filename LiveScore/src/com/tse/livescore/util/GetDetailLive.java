@@ -14,49 +14,85 @@ public class GetDetailLive {
 	JSONObject jsonObject;
 	JSONArray jsonArray;
 	
-	public GetDetailLive(int idLive) throws Exception{
-		String s=HttpUtil.getRequest("http://live-score.sqli.cloudbees.net/livescore/live/"+idLive);
-		jsonObject=new JSONObject(s);
-		jsonArray=jsonObject.getJSONArray("evenements");
+	public GetDetailLive(int idLive) {
+		String s;
+		try {
+			s = HttpUtil.getRequest("http://live-score.sqli.cloudbees.net/livescore/live/"+idLive);
+			jsonObject=new JSONObject(s);
+			jsonArray=jsonObject.getJSONArray("evenements");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	public int getId() throws Exception{
-		return jsonObject.getInt("id");
+	public int getId() {
+		try {
+			return jsonObject.getInt("id");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return -1;
+		}
 	}
 	
 	public String getCommentateur(){
 		try {
 			return jsonObject.getString("commentateur");
 		} catch (JSONException e) {
-			return " ";
+			return "NULL";
 		}
 	}
 	
-	public String getNom() throws JSONException{
-		return jsonObject.getString("nom");
+	public String getNom(){
+		try {
+			return jsonObject.getString("nom");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "NULL";
+		}
 	}
 	
-	public String getEquipe1() throws JSONException{
-		return jsonObject.getString("equipe1");
+	public String getEquipe1() {
+		try {
+			return jsonObject.getString("equipe1");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "NULL";
+		}
 	}
 	
-	public String getEquipe2() throws JSONException{
-		return jsonObject.getString("equipe2");
+	public String getEquipe2() {
+		try {
+			return jsonObject.getString("equipe2");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "NULL";
+		}
 	}
 	
-	public String getScoreEquipe1() throws JSONException{
-		return jsonObject.getString("scoreEquipe1");
+	public String getScoreEquipe1() {
+		try {
+			return jsonObject.getString("scoreEquipe1");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "-1";
+		}
 	}
 	
-	public String getScoreEquipe2() throws JSONException{
-		return jsonObject.getString("scoreEquipe2");
+	public String getScoreEquipe2() {
+		try {
+			return jsonObject.getString("scoreEquipe2");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "-1";
+		}
 	}
 	
 	public String getCompititionNom(){
 		try {
 			return jsonObject.getJSONObject("competition").getString("libelle");
 		} catch (JSONException e) {
-			return " ";
+			return "NULL";
 		}
 	}
 	
@@ -64,23 +100,33 @@ public class GetDetailLive {
 		try {
 			return jsonObject.getJSONObject("departement").getString("nom");
 		} catch (JSONException e) {
-			return " ";
+			return "NULL";
 		}
 	}
 	
-	public String getLatitude() throws JSONException{
-		return jsonObject.getString("latitude");
+	public String getLatitude() {
+		try {
+			return jsonObject.getString("latitude");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "0";
+		}
 	}
 	
-	public String getLongitude() throws JSONException{
-		return jsonObject.getString("longitude");
+	public String getLongitude() {
+		try {
+			return jsonObject.getString("longitude");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "0";
+		}
 	}
 	
 	public String getShortDescription(){
 		try {
 			return jsonObject.getString("shortDescription");
 		} catch (JSONException e) {
-			return " ";
+			return "NULL";
 		}
 	}
 	
@@ -88,7 +134,7 @@ public class GetDetailLive {
 		try {
 			return jsonObject.getString("longDescription");
 		} catch (JSONException e) {
-			return " ";
+			return "NULL";
 		}
 	}
 	
@@ -97,7 +143,7 @@ public class GetDetailLive {
 		try {
 			s = jsonObject.getString("dateDebut");
 		} catch (JSONException e) {
-			return " ";
+			return "NULL";
 		}
 		DateFormat format=DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM, Locale.US);
 		Date date=format.parse(s);
@@ -106,19 +152,35 @@ public class GetDetailLive {
 		return sout;
 	}
 	
-	public String getSportNom() throws JSONException{
-		return jsonObject.getJSONObject("sport").getString("nom");
+	public String getSportNom(){
+		try {
+			return jsonObject.getJSONObject("sport").getString("nom");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "NULL";
+		}
 	}
 	
 	public int evenementSize(){
 		return jsonArray.length();
 	}
 	
-	public String getEvenement(int id) throws JSONException{
-		return jsonArray.getJSONObject(id).getString("commentaire");
+	public String getEvenement(int id) {
+		try {
+			return jsonArray.getJSONObject(id).getString("commentaire");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "NULL";
+		}
+		
 	}
 	
-	public int getEvenementId(int i) throws JSONException{
-		return jsonArray.getJSONObject(i).getInt("id");
+	public int getEvenementId(int i) {
+		try {
+			return jsonArray.getJSONObject(i).getInt("id");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return -1;
+		}
 	}
 }

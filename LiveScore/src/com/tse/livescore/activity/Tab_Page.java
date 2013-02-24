@@ -26,10 +26,12 @@ public class Tab_Page extends TabActivity {
         inflater_tab1.inflate(R.layout.tab1, mTabHost.getTabContentView());  
         
         Intent it = new Intent(this, Main_Page.class);
+        Intent newLive=new Intent(this,New_Live_Page.class);
+        Intent search=new Intent(this,Search_Page.class);
         
         mTabHost.addTab(mTabHost.newTabSpec("tab_test1").setIndicator("List").setContent(it));  
-        mTabHost.addTab(mTabHost.newTabSpec("tab_test2").setIndicator("Search").setContent(it)); 
-        mTabHost.addTab(mTabHost.newTabSpec("tab_test3").setIndicator("New").setContent(it));  
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test2").setIndicator("Search").setContent(search)); 
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test3").setIndicator("New").setContent(newLive));  
     }
 
 

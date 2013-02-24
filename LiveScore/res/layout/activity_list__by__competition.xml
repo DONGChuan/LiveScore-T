@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".List_By_Competition" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+
+        <Spinner 
+        	android:id="@+id/competitions"
+        	android:layout_width="0dip"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"/>
+    
+    	<Button
+        	android:id="@+id/button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+	        android:text="@string/rechercher" />
+    
+    </LinearLayout>
+    
+    	<ListView
+        	android:id="@+id/lives"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -34,7 +34,9 @@
         </activity>
         <activity
             android:name="com.tse.livescore.activity.Detail_Live_Page"
-            android:label="@string/title_activity_detail__live__page" >
+            android:label="@string/title_activity_detail__live__page"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="com.tse.livescore.activity.MyTabListener"
@@ -43,6 +45,26 @@
         <activity
             android:name="com.tse.livescore.activity.Tab_Page"
             android:label="@string/title_activity_tab__page" >
+        </activity>
+        <activity
+            android:name="com.tse.livescore.activity.New_Live_Page"
+            android:label="@string/title_activity_new__live__page" >
+        </activity>
+        <activity
+            android:name="com.tse.livescore.activity.List_By_Competition"
+            android:label="@string/title_activity_list__by__competition" >
+        </activity>
+        <activity
+            android:name="com.tse.livescore.activity.Search_Page"
+            android:label="@string/title_activity_search__page" >
+        </activity>
+        <activity
+            android:name="com.tse.livescore.activity.List_By_Date"
+            android:label="@string/title_activity_list__by__date" >
+        </activity>
+        <activity
+            android:name="com.tse.livescore.activity.List_By_Depar_And_Sport"
+            android:label="@string/title_activity_list__by__depar__and__sport" >
         </activity>
     </application>
 

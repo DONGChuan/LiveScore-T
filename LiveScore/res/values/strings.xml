@@ -10,5 +10,18 @@
     <string name="title_activity_detail__live__page">Detail_Live_Page</string>
     <string name="title_activity_my_tab_listener">MyTabListener</string>
     <string name="title_activity_tab__page">Live Score</string>
+    <string name="commentateur">Commentateur :</string>
+    <string name="nom">Nom</string>
+    <string name="commenter">commenter</string>
+    <string name="plus">plus un point</string>
+    <string name="moins">moins un point</string>
+    <string name="vs">contre</string>
+    <string name="commentaire">ajouter</string>
+    <string name="title_activity_new__live__page">New_Live_Page</string>
+    <string name="title_activity_list__by__competition">List_By_Competition</string>
+    <string name="rechercher">Rechercher</string>
+    <string name="title_activity_search__page">Search_Page</string>
+    <string name="title_activity_list__by__date">List_By_Date</string>
+    <string name="title_activity_list__by__depar__and__sport">List_By_Depar_And_Sport</string>
 
 </resources>

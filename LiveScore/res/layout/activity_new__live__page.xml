@@ -1,0 +1,212 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    tools:context=".New_Live_Page" >
+
+<LinearLayout     
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/debut" />
+	<DatePicker
+	    android:id="@+id/datePicker"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:calendarViewShown="false" />
+
+	<LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+   			
+		<TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:layout_weight="1"
+	        android:text="@string/sport" />
+	    <Spinner 
+	        android:id="@+id/sport"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" />
+	 </LinearLayout>
+	 
+	<LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+   			
+		<TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:layout_weight="1"
+	        android:text="@string/competition" />
+	    <Spinner 
+	        android:id="@+id/competition"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" />
+	 </LinearLayout>
+	 
+	<LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+   			
+		<TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/departement" />
+	    <Spinner 
+	        android:id="@+id/departement"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" />
+	 </LinearLayout>
+
+
+    <LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		 android:layout_height="wrap_content">
+    
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/commentateur" />
+	     <EditText
+	        android:id="@+id/commentateur"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="@string/reminder" />    
+        </LinearLayout>
+     
+    <LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		 android:layout_height="wrap_content">
+    
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/equipe1" />
+	     <EditText
+	        android:id="@+id/equipe1"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="@string/reminder" />    
+        </LinearLayout>
+     
+    <LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		 android:layout_height="wrap_content">
+    
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/equipe2" />
+	     <EditText
+	        android:id="@+id/equipe2"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="@string/reminder" />    
+        </LinearLayout>  
+ 
+
+
+     
+    <LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		 android:layout_height="wrap_content">
+    
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/latitude" />
+	     <EditText
+	        android:id="@+id/latitude"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:inputType="number"
+	        android:hint="@string/reminder" />    
+        </LinearLayout> 
+     
+    <LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		 android:layout_height="wrap_content">
+    
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/longitude" />
+	     <EditText
+	        android:id="@+id/longitude"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:inputType="number"
+	        android:hint="@string/reminder" />    
+        </LinearLayout> 
+     
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shortDescription" />
+     <EditText
+        android:id="@+id/shortDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/reminder" />
+     
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longDescription" />
+     <EditText
+        android:id="@+id/longDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/reminder" />
+     
+  	<LinearLayout     
+    	android:orientation="horizontal"
+    	android:layout_width="match_parent"
+   		android:layout_height="wrap_content">
+    <Button 
+        android:id="@+id/creer"
+       	android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/creer" />
+    </LinearLayout>
+    
+</LinearLayout>
+</ScrollView>
+

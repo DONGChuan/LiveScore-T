@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".List_By_Depar_And_Sport" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+    	<Spinner 
+        	android:id="@+id/sports"
+        	android:layout_width="0dip"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"/>
+    
+   		<Spinner 
+        	android:id="@+id/departements"
+        	android:layout_width="0dip"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"/>
+    
+    	<Button
+        	android:id="@+id/button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/rechercher" />
+   </LinearLayout>
+   
+   <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    	
+    	<ListView
+        	android:id="@+id/lives"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" />
+    	
+    </LinearLayout>
+    
+   
+
+</LinearLayout>
