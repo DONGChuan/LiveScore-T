@@ -3,7 +3,6 @@ package com.tse.livescore.activity;
 
 import org.json.JSONException;
 import com.tse.livescore.util.GetLives;
-import com.tse.livescore.util.checkInternet;
 
 import android.os.Bundle;
 import android.os.StrictMode;

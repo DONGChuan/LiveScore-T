@@ -1,6 +1,5 @@
 package com.tse.livescore.util;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class AjoutEvenement {
