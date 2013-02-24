@@ -84,7 +84,7 @@ public class Main_Page extends Activity {
 			listView_basketball.setAdapter(arrayAdapter_basketball);
 			setOnItemClickListener(listView_basketball,3);
 			
-			Toast.makeText(this, "加载成功", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Loading successful", Toast.LENGTH_LONG).show();
 
 			
 		} catch (Exception e) {
@@ -157,7 +157,7 @@ public class Main_Page extends Activity {
 	
 	private void update(){
 		setList();
-		Toast.makeText(this, "更新成功", Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "Fresh successful", Toast.LENGTH_LONG).show();
 	}
 	
 }

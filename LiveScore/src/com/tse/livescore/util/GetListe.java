@@ -54,7 +54,7 @@ public class GetListe {
 			if(jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id") == ID )	{
 				a = getNom(i);
 				for(int i1=0;i1<15-getNom(i).length();i1++){
-					a+=">";
+					a+=" ";
 				}
 				a+= getScoreEquipe1(i) + ":"+ getScoreEquipe2(i);
 				list.add(a);
