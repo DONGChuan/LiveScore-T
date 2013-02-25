@@ -1,9 +1,13 @@
 package com.tse.livescore.util;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import com.tse.livescore.activity.R;
 
 
 public class GetListe {
@@ -58,6 +62,23 @@ public class GetListe {
 				}
 				a+= getScoreEquipe1(i) + ":"+ getScoreEquipe2(i);
 				list.add(a);
+			}
+				
+		}
+		return list;
+	}
+	
+public List<Map<String,Object>> getListeSport2(int ID) throws JSONException{		
+		ArrayList<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
+		String a = null ;
+		
+		for(int i=0;i<size();i++){
+			if(jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id") == ID ){
+				a = getNom(i);
+				Map<String, Object> map = new HashMap<String, Object>();
+				map.put("title", a);
+				map.put("score", getScoreEquipe1(i) + ":"+ getScoreEquipe2(i));
+				list.add(map);
 			}
 				
 		}

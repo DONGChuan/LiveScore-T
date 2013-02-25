@@ -22,6 +22,7 @@ public class Launch_Page extends Activity {
 			@Override
 			public void run() {
 				startActivity(it); //÷¥––
+				Launch_Page.this.finish();
 			}
 		};
 		timer.schedule(task, 1000 * 3); //3√Î∫Û

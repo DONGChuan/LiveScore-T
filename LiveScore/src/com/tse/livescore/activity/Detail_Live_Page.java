@@ -18,12 +18,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Detail_Live_Page extends Activity {
 	GetDetailLive live;
 	int id;
 	int scoreEquipe1;
 	int scoreEquipe2;
+	int changed=0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,20 @@ public class Detail_Live_Page extends Activity {
 		evenement();
 		
 	}
+		
 	
+	@Override
+	public void finish() {
+		Bundle bundle = new Bundle();
+		bundle.putInt("changed",changed);
+		Intent aintent = new Intent(Detail_Live_Page.this, Single_sport.class);
+		aintent.putExtras(bundle);
+		setResult(RESULT_OK,aintent);
+		super.finish();
+	}
+
+
+
 	private void afficher(){
 		try {
 			live=new GetDetailLive(id);
@@ -91,6 +106,7 @@ public class Detail_Live_Page extends Activity {
 			@Override
 			public void onClick(View v) {
 				scoreEquipe1++;
+				changed=1;
 				try {
 					MAJScore.execute(live.getId(), scoreEquipe1, scoreEquipe2);
 					maj();
@@ -105,6 +121,7 @@ public class Detail_Live_Page extends Activity {
 			@Override
 			public void onClick(View v) {
 				scoreEquipe1--;
+				changed=1;
 				try {
 					MAJScore.execute(live.getId(), scoreEquipe1, scoreEquipe2);
 					maj();
@@ -119,6 +136,7 @@ public class Detail_Live_Page extends Activity {
 			@Override
 			public void onClick(View v) {
 				scoreEquipe2++;
+				changed=1;
 				try {
 					MAJScore.execute(live.getId(), scoreEquipe1, scoreEquipe2);
 					maj();
@@ -133,6 +151,7 @@ public class Detail_Live_Page extends Activity {
 			@Override
 			public void onClick(View v) {
 				scoreEquipe2--;
+				changed=1;
 				try {
 					MAJScore.execute(live.getId(), scoreEquipe1, scoreEquipe2);
 					maj();

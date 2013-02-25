@@ -66,6 +66,10 @@
             android:name="com.tse.livescore.activity.List_By_Depar_And_Sport"
             android:label="@string/title_activity_list__by__depar__and__sport" >
         </activity>
+        <activity
+            android:name="com.tse.livescore.activity.Single_sport"
+            android:label="@string/title_activity_single_sport" >
+        </activity>
     </application>
 
 </manifest>

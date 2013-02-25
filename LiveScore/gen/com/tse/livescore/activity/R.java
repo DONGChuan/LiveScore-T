@@ -10,60 +10,78 @@ package com.tse.livescore.activity;
 public final class R {
     public static final class attr {
     }
+    public static final class dimen {
+        /**  Default screen margins, per the Android Design guidelines. 
+
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+         */
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+    }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int launch_page=0x7f020001;
-        public static final int logo=0x7f020002;
-        public static final int moins=0x7f020003;
-        public static final int plus=0x7f020004;
-        public static final int vs=0x7f020005;
+        public static final int basketball=0x7f020000;
+        public static final int football=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int launch_page=0x7f020003;
+        public static final int logo=0x7f020004;
+        public static final int moins=0x7f020005;
+        public static final int plus=0x7f020006;
+        public static final int rugby=0x7f020007;
+        public static final int search=0x7f020008;
+        public static final int vs=0x7f020009;
     }
     public static final class id {
-        public static final int LinearLayout01=0x7f07002b;
-        public static final int basketball_listview=0x7f070025;
-        public static final int button=0x7f07001e;
-        public static final int comentaires=0x7f07001b;
-        public static final int commentaire=0x7f070018;
-        public static final int commentateur=0x7f070015;
-        public static final int commenter=0x7f070019;
-        public static final int competition=0x7f070003;
-        public static final int competitions=0x7f07001d;
-        public static final int creer=0x7f070029;
-        public static final int date=0x7f070002;
-        public static final int datePicker=0x7f070020;
-        public static final int departement=0x7f070026;
-        public static final int departements=0x7f070022;
-        public static final int e1moins1=0x7f07000a;
-        public static final int e1plus1=0x7f070009;
-        public static final int e2moins1=0x7f070011;
-        public static final int e2plus1=0x7f070010;
-        public static final int equipe1=0x7f070007;
-        public static final int equipe2=0x7f07000e;
-        public static final int football_listview=0x7f070023;
-        public static final int imageView1=0x7f07001c;
-        public static final int latitude=0x7f070004;
-        public static final int lives=0x7f07001f;
-        public static final int longDes=0x7f070013;
-        public static final int longDescription=0x7f070028;
-        public static final int longitude=0x7f070005;
-        public static final int menu_settings=0x7f07002c;
-        public static final int nomCommen=0x7f070016;
-        public static final int rugby_listview=0x7f070024;
-        public static final int score1=0x7f070008;
-        public static final int score2=0x7f07000f;
-        public static final int search=0x7f07002a;
-        public static final int shortDes=0x7f070012;
-        public static final int shortDescription=0x7f070027;
-        public static final int sport=0x7f070001;
-        public static final int sports=0x7f070021;
-        public static final int vs=0x7f07000c;
-        public static final int widget10=0x7f07001a;
-        public static final int widget3=0x7f070000;
-        public static final int widget4=0x7f070006;
-        public static final int widget5=0x7f07000b;
-        public static final int widget6=0x7f07000d;
-        public static final int widget8=0x7f070014;
-        public static final int widget9=0x7f070017;
+        public static final int LinearLayout01=0x7f08002e;
+        public static final int action_settings=0x7f080030;
+        public static final int arrow=0x7f08002d;
+        public static final int button=0x7f08001e;
+        public static final int comentaires=0x7f08001b;
+        public static final int commentaire=0x7f080018;
+        public static final int commentateur=0x7f080015;
+        public static final int commenter=0x7f080019;
+        public static final int competition=0x7f080003;
+        public static final int competitions=0x7f08001d;
+        public static final int creer=0x7f080027;
+        public static final int date=0x7f080002;
+        public static final int datePicker=0x7f080020;
+        public static final int departement=0x7f080024;
+        public static final int departements=0x7f080022;
+        public static final int e1moins1=0x7f08000a;
+        public static final int e1plus1=0x7f080009;
+        public static final int e2moins1=0x7f080011;
+        public static final int e2plus1=0x7f080010;
+        public static final int equipe1=0x7f080007;
+        public static final int equipe2=0x7f08000e;
+        public static final int imageView1=0x7f08001c;
+        public static final int img=0x7f08002a;
+        public static final int latitude=0x7f080004;
+        public static final int lives=0x7f08001f;
+        public static final int longDes=0x7f080013;
+        public static final int longDescription=0x7f080026;
+        public static final int longitude=0x7f080005;
+        public static final int menu_settings=0x7f08002f;
+        public static final int nomCommen=0x7f080016;
+        public static final int score=0x7f08002c;
+        public static final int score1=0x7f080008;
+        public static final int score2=0x7f08000f;
+        public static final int search=0x7f080028;
+        public static final int shortDes=0x7f080012;
+        public static final int shortDescription=0x7f080025;
+        public static final int single_sport=0x7f080029;
+        public static final int sport=0x7f080001;
+        public static final int sports=0x7f080021;
+        public static final int sports_listview=0x7f080023;
+        public static final int title=0x7f08002b;
+        public static final int vs=0x7f08000c;
+        public static final int widget10=0x7f08001a;
+        public static final int widget3=0x7f080000;
+        public static final int widget4=0x7f080006;
+        public static final int widget5=0x7f08000b;
+        public static final int widget6=0x7f08000d;
+        public static final int widget8=0x7f080014;
+        public static final int widget9=0x7f080017;
     }
     public static final class layout {
         public static final int activity_detail__live__page=0x7f030000;
@@ -74,26 +92,31 @@ public final class R {
         public static final int activity_main__page=0x7f030005;
         public static final int activity_new__live__page=0x7f030006;
         public static final int activity_search__page=0x7f030007;
-        public static final int activity_tab__page=0x7f030008;
-        public static final int tab1=0x7f030009;
+        public static final int activity_single_sport=0x7f030008;
+        public static final int activity_tab__page=0x7f030009;
+        public static final int item_match=0x7f03000a;
+        public static final int item_sport=0x7f03000b;
+        public static final int tab1=0x7f03000c;
     }
     public static final class menu {
-        public static final int activity_detail__live__page=0x7f060000;
-        public static final int activity_launch__page=0x7f060001;
-        public static final int activity_list__by__competition=0x7f060002;
-        public static final int activity_list__by__date=0x7f060003;
-        public static final int activity_list__by__depar__and__sport=0x7f060004;
-        public static final int activity_list_view_loader=0x7f060005;
-        public static final int activity_main__page=0x7f060006;
-        public static final int activity_my_tab_listener=0x7f060007;
-        public static final int activity_new__live=0x7f060008;
-        public static final int activity_new__live__page=0x7f060009;
-        public static final int activity_search__page=0x7f06000a;
-        public static final int activity_tab__page=0x7f06000b;
+        public static final int activity_detail__live__page=0x7f070000;
+        public static final int activity_launch__page=0x7f070001;
+        public static final int activity_list__by__competition=0x7f070002;
+        public static final int activity_list__by__date=0x7f070003;
+        public static final int activity_list__by__depar__and__sport=0x7f070004;
+        public static final int activity_list_view_loader=0x7f070005;
+        public static final int activity_main__page=0x7f070006;
+        public static final int activity_my_tab_listener=0x7f070007;
+        public static final int activity_new__live=0x7f070008;
+        public static final int activity_new__live__page=0x7f070009;
+        public static final int activity_search__page=0x7f07000a;
+        public static final int activity_tab__page=0x7f07000b;
+        public static final int single_sport=0x7f07000c;
     }
     public static final class string {
         public static final int about_msg=0x7f040008;
         public static final int about_title=0x7f040007;
+        public static final int action_settings=0x7f04002e;
         public static final int add=0x7f040002;
         public static final int app_name=0x7f040017;
         public static final int basketball=0x7f040005;
@@ -133,6 +156,7 @@ public final class R {
         public static final int title_activity_my_tab_listener=0x7f04001e;
         public static final int title_activity_new__live__page=0x7f040027;
         public static final int title_activity_search__page=0x7f04002a;
+        public static final int title_activity_single_sport=0x7f04002d;
         public static final int title_activity_tab__page=0x7f04001f;
         public static final int update=0x7f040003;
         public static final int vs=0x7f040025;
@@ -160,10 +184,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f060001;
     }
 }
