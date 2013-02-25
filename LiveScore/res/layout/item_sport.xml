@@ -9,23 +9,23 @@
         android:id="@+id/img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="3px" />
+        android:layout_margin="3dp" />
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="0.8"
-        android:textSize="16px" />
+        android:textSize="16sp" />
     
     <TextView
         android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=">"
-        android:textSize="20px"
+        android:textSize="20sp"
         android:gravity="right"
-        android:layout_margin="5px" />
+        android:layout_margin="5dp" />
 
 </LinearLayout>
