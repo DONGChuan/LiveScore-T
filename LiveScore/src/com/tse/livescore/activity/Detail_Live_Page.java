@@ -198,11 +198,16 @@ public class Detail_Live_Page extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(3, MENU_Update, 0, "Fresh");
-		menu.add(3, MENU_Delete, 0, "Delete");
-		menu.add(3, MENU_Quit, 0, "End");
-		menu.add(3, MENU_ABOUT, 0, "About...");
+		menu.add(3, MENU_Update, 1, "Fresh").setIcon(android.R.drawable.ic_popup_sync);
+		menu.add(3, MENU_Delete, 2, "Delete").setIcon(android.R.drawable.ic_menu_day);
+		menu.add(3, MENU_Quit, 3, "End").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		menu.add(3, MENU_ABOUT, 4, "About...").setIcon(android.R.drawable.ic_menu_info_details);
 		return true;
+		
+		//menu.getItem(1).setIcon(android.R.drawable.ic_menu_day);
+		//menu.getItem(2).setIcon(android.R.drawable.ic_menu_day);
+		//menu.getItem(3).setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		//menu.getItem(4).setIcon(android.R.drawable.ic_menu_info_details);
 	}
 
 	@Override
