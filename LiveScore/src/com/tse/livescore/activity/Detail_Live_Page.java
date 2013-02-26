@@ -8,8 +8,11 @@ import com.tse.livescore.util.MAJScore;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -19,7 +22,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.tse.livescore.util.*;;
 public class Detail_Live_Page extends Activity {
 	GetDetailLive live;
 	int id;
@@ -186,11 +189,68 @@ public class Detail_Live_Page extends Activity {
 		finish();
 	}
 
+	protected static final int MENU_Update = Menu.FIRST;
+	protected static final int MENU_Delete = Menu.FIRST + 1;
+	protected static final int MENU_Quit = Menu.FIRST + 2;
+	protected static final int MENU_ABOUT = Menu.FIRST + 3;
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_detail__live__page, menu);
+		super.onCreateOptionsMenu(menu);
+		menu.add(3, MENU_Update, 0, "Fresh");
+		menu.add(3, MENU_Delete, 0, "Delete");
+		menu.add(3, MENU_Quit, 0, "End");
+		menu.add(3, MENU_ABOUT, 0, "About...");
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case MENU_ABOUT:
+			openOptionsDialog();
+			break;
+		case MENU_Quit:
+			finish();
+			break;
+		case MENU_Update:
+			update();
+			break;
+		case MENU_Delete:
+			delete();
+			break;
+		}
+		return true;
+	}
+	
+	private boolean delete(){
+		
+		try {
+			return HttpUtil.DeleteRequest(this.id);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
+	}
+	private void openOptionsDialog() {
+
+		new AlertDialog.Builder(this).setTitle(R.string.about_title)
+				.setMessage(R.string.about_msg)
+				.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+					}
+				}).show();
+	}
+
+	private void update() {
+		maj();
+		Toast.makeText(this, "Fresh successful", Toast.LENGTH_LONG).show();
 	}
 
 }
