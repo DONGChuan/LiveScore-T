@@ -1,8 +1,7 @@
 package com.tse.livescore.activity;
 
-import org.json.JSONException;
-
 import com.tse.livescore.util.GetLives;
+import com.tse.livescore.util.HttpUtil;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -13,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -45,10 +45,10 @@ public class Single_sport extends Activity {
 		
 		switch(sport_id){
 		case 1:layout.setBackgroundResource(R.drawable.football_background);break;
-		case 2:layout.setBackgroundResource(R.drawable.basketball_background);break;
+		case 2:layout.setBackgroundResource(R.drawable.rugby_background);break;
 		case 3:layout.setBackgroundResource(R.drawable.basketball_background);break;
 		}
-
+	
 	}
 
 	private void initaldata() {
@@ -58,7 +58,7 @@ public class Single_sport extends Activity {
 					lives.getListeSport2(sport_id), R.layout.item_match,
 					new String[] { "title", "score" }, new int[] { R.id.title,
 							R.id.score });
-			lv_sport.setAdapter(adapter);
+			lv_sport.setAdapter(adapter);		
 			lv_sport.setOnItemClickListener(new OnItemClickListener() {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view,
@@ -75,16 +75,52 @@ public class Single_sport extends Activity {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} 
+
 				}
+				
 
 			});
+			
+			lv_sport.setOnItemLongClickListener(new OnItemLongClickListener(){
+
+				@Override
+				public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+						final int arg2, long arg3) {
+
+					new AlertDialog.Builder(Single_sport.this).setTitle(R.string.about_title)
+					.setMessage(R.string.about_msg)
+					.setPositiveButton("Yes",
+							new DialogInterface.OnClickListener(){
+								@Override
+								public void onClick(DialogInterface dialog, int which){
+									try {
+										HttpUtil.DeleteRequest(arg2);
+										update();	
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+								}
+						}).setNegativeButton("No",
+							new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog, int which){
+									// TODO Auto-generated method stub
+								}
+							}
+						).show();
+					
+					return false;
+				}
+			});
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 	}
-
+	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
