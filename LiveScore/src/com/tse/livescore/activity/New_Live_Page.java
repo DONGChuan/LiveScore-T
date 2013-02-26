@@ -117,11 +117,7 @@ public class New_Live_Page extends Activity {
 				@Override
 				public void onItemSelected(AdapterView<?> arg0, View arg1,
 						int arg2, long arg3) {
-						try {
 							competitionId=glc.getId(arg2);
-						} catch (JSONException e) {
-							e.printStackTrace();
-						}
 				}
 				@Override
 				public void onNothingSelected(AdapterView<?> arg0) {
@@ -143,11 +139,7 @@ public class New_Live_Page extends Activity {
 				@Override
 				public void onItemSelected(AdapterView<?> arg0, View arg1,
 						int arg2, long arg3) {
-					try {
 						sportId=gls.getId(arg2);
-					} catch (JSONException e) {
-						e.printStackTrace();
-					}
 				}
 				@Override
 				public void onNothingSelected(AdapterView<?> arg0) {
@@ -169,11 +161,7 @@ public class New_Live_Page extends Activity {
 				@Override
 				public void onItemSelected(AdapterView<?> arg0, View arg1,
 						int arg2, long arg3) {
-					try {
 						departementId=gld.getId(arg2);
-					} catch (JSONException e) {
-						e.printStackTrace();
-					}
 				}
 				@Override
 				public void onNothingSelected(AdapterView<?> arg0) {

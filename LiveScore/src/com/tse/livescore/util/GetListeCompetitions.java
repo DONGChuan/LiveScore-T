@@ -5,8 +5,13 @@ import org.json.JSONException;
 public class GetListeCompetitions extends GetListe{
 	
 	@Override
-	public String getNom(int i) throws JSONException{
-		return jsonArray.getJSONObject(i).getString("libelle");
+	public String getNom(int i) {
+		try {
+			return jsonArray.getJSONObject(i).getString("libelle");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "NULL";
+		}
 	}
 
 	public GetListeCompetitions() throws Exception {

@@ -60,11 +60,7 @@ public class List_By_Date extends Activity {
 						public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 								long arg3) {
 							Bundle bundle=new Bundle();
-							try {
 								bundle.putInt("id", lives.getId(arg2));
-							} catch (JSONException e) {
-								e.printStackTrace();
-							}
 							Intent intent=new Intent(List_By_Date.this,Detail_Live_Page.class);
 							intent.putExtras(bundle);
 							startActivity(intent);

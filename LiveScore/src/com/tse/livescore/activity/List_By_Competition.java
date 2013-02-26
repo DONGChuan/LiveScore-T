@@ -37,11 +37,7 @@ public class List_By_Competition extends Activity {
 				@Override
 				public void onItemSelected(AdapterView<?> arg0, View arg1,
 						int arg2, long arg3) {
-						try {
 							idCompetition=glc.getId(arg2);
-						} catch (JSONException e) {
-							e.printStackTrace();
-						}
 				}
 				@Override
 				public void onNothingSelected(AdapterView<?> arg0) {
@@ -69,11 +65,7 @@ public class List_By_Competition extends Activity {
 						public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 								long arg3) {
 							Bundle bundle=new Bundle();
-							try {
 								bundle.putInt("id", lives.getId(arg2));
-							} catch (JSONException e) {
-								e.printStackTrace();
-							}
 							Intent intent=new Intent(List_By_Competition.this,Detail_Live_Page.class);
 							intent.putExtras(bundle);
 							startActivity(intent);

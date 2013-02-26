@@ -74,11 +74,7 @@ public class Single_sport extends Activity {
 					} catch (NumberFormatException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
-					} catch (JSONException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
+					} 
 				}
 
 			});

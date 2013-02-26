@@ -25,23 +25,43 @@ public class GetListe {
 		return jsonArray.length();
 	}
 	
-	public String getScoreEquipe1(int i) throws JSONException{
-		return jsonArray.getJSONObject(i).getString("scoreEquipe1");
+	public String getScoreEquipe1(int i){
+		try {
+			return jsonArray.getJSONObject(i).getString("scoreEquipe1");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "-1";
+		}
 	}
 	
-	public String getScoreEquipe2(int i) throws JSONException{
-		return jsonArray.getJSONObject(i).getString("scoreEquipe2");
+	public String getScoreEquipe2(int i) {
+		try {
+			return jsonArray.getJSONObject(i).getString("scoreEquipe2");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "-1";
+		}
 	}
 	
-	public String getNom(int i) throws JSONException{
-		return jsonArray.getJSONObject(i).getString("nom");
+	public String getNom(int i) {
+		try {
+			return jsonArray.getJSONObject(i).getString("nom");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return "NULL";
+		}
 	}
 	
-	public int getId(int id) throws JSONException{
-		return jsonArray.getJSONObject(id).getInt("id");
+	public int getId(int id) {
+		try {
+			return jsonArray.getJSONObject(id).getInt("id");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return -1;
+		}
 	}
 	
-	public List<String> getListe() throws JSONException{
+	public List<String> getListe() {
 		ArrayList<String> list=new ArrayList<String>();
 		for(int i=0;i<size();i++){
 			list.add(getNom(i));
@@ -68,12 +88,19 @@ public class GetListe {
 		return list;
 	}
 	
-public List<Map<String,Object>> getListeSport2(int ID) throws JSONException{		
+public List<Map<String,Object>> getListeSport2(int ID) {		
 		ArrayList<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
 		String a = null ;
 		
 		for(int i=0;i<size();i++){
-			if(jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id") == ID ){
+			
+			int id2=-1;
+			try {
+				id2=jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id");
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			if( id2== ID ){
 				a = getNom(i);
 				Map<String, Object> map = new HashMap<String, Object>();
 				map.put("title", a);
@@ -85,12 +112,18 @@ public List<Map<String,Object>> getListeSport2(int ID) throws JSONException{
 		return list;
 	}
 	
-	public List<String> getListeSportID(int ID) throws JSONException{
+	public List<String> getListeSportID(int ID) {
 		
 		ArrayList<String> list=new ArrayList<String>();
 		
 		for(int i=0;i<size();i++){
-			if(jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id") == ID )	
+			int id2=-1;
+			try {
+				id2=jsonArray.getJSONObject(i).getJSONObject("sport").getInt("id");
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			if( id2== ID )	
 				list.add(String.valueOf(getId(i)));
 		}
 		return list;
