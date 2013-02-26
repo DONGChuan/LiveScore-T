@@ -40,6 +40,15 @@ public class Single_sport extends Activity {
 		sport_name = bundle.getString("sport_name");
 		this.setTitle(sport_name);
 		lv_sport = (ListView) this.findViewById(R.id.single_sport);
+		
+		View layout = this.findViewById(R.id.linearLayout);
+		
+		switch(sport_id){
+		case 1:layout.setBackgroundResource(R.drawable.football_background);break;
+		case 2:layout.setBackgroundResource(R.drawable.basketball_background);break;
+		case 3:layout.setBackgroundResource(R.drawable.basketball_background);break;
+		}
+
 	}
 
 	private void initaldata() {
@@ -84,10 +93,10 @@ public class Single_sport extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		//super.onActivityResult(requestCode, resultCode, data);
-		switch (resultCode) { // resultCode涓哄洖浼犵殑鏍囪锛屾垜鍦˙涓洖浼犵殑鏄疪ESULT_OK
+		switch (resultCode) { // resultCode娑撳搫娲栨导鐘垫畱閺嶅洩顔囬敍灞惧灉閸λ欐稉顓炴礀娴肩姷娈戦弰鐤狤SULT_OK
 		case RESULT_OK:
-			Bundle b = data.getExtras(); // data涓築涓洖浼犵殑Intent
-			int changed = b.getInt("changed");// str鍗充负鍥炰紶鐨勫�"Hello, this is B speaking"
+			Bundle b = data.getExtras(); // data娑撶瘔娑擃厼娲栨导鐘垫畱Intent
+			int changed = b.getInt("changed");// str閸楀厖璐熼崶鐐扮炊閻ㄥ嫬锟�Hello, this is B speaking"
 			if(changed==1){
 				initaldata();
 			}
