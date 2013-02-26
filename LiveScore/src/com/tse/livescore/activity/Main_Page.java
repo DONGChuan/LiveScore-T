@@ -158,9 +158,10 @@ public class Main_Page extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, MENU_Update, 0, "Fresh");
-		menu.add(0, MENU_Quit, 0, "End");
-		menu.add(0, MENU_ABOUT, 0, "About...");
+		menu.add(1, MENU_Update, 0, "Fresh");
+		menu.add(1, MENU_Quit, 0, "End");
+		menu.add(1, MENU_ABOUT, 0, "About...");
+		
 		return true;
 	}
 
@@ -218,7 +219,7 @@ public class Main_Page extends Activity {
                      }
              }).create();
              alertbBuilder.show();
-            return true;  
+            return false;  
         }  
         return true;  
     }  
