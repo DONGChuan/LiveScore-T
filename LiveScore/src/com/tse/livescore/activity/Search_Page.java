@@ -100,17 +100,17 @@ public class Search_Page extends Activity {
 
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("title", "Liste par competition");
-		map.put("img", R.drawable.search);
+		map.put("img",android.R.drawable.ic_menu_search);
 		list.add(map);
 
 		map = new HashMap<String, Object>();
 		map.put("title", "Liste par date");
-		map.put("img", R.drawable.search);
+		map.put("img",android.R.drawable.ic_menu_search);
 		list.add(map);
 
 		map = new HashMap<String, Object>();
 		map.put("title", "Liste par departements et par sports");
-		map.put("img", R.drawable.search);
+		map.put("img",android.R.drawable.ic_menu_search);
 		list.add(map);
 
 		return list;

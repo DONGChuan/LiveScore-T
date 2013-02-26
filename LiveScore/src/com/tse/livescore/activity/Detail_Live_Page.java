@@ -220,6 +220,8 @@ public class Detail_Live_Page extends Activity {
 			break;
 		case MENU_Delete:
 			delete();
+			finish();
+			Toast.makeText(this, "Delete successful,Please fresh", Toast.LENGTH_LONG).show();
 			break;
 		}
 		return true;
