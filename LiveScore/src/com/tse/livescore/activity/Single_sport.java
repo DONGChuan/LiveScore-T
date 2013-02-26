@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -85,10 +84,10 @@ public class Single_sport extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		//super.onActivityResult(requestCode, resultCode, data);
-		switch (resultCode) { // resultCode为回传的标记，我在B中回传的是RESULT_OK
+		switch (resultCode) { // resultCode涓哄洖浼犵殑鏍囪锛屾垜鍦˙涓洖浼犵殑鏄疪ESULT_OK
 		case RESULT_OK:
-			Bundle b = data.getExtras(); // data为B中回传的Intent
-			int changed = b.getInt("changed");// str即为回传的值"Hello, this is B speaking"
+			Bundle b = data.getExtras(); // data涓築涓洖浼犵殑Intent
+			int changed = b.getInt("changed");// str鍗充负鍥炰紶鐨勫�"Hello, this is B speaking"
 			if(changed==1){
 				initaldata();
 			}

@@ -199,7 +199,7 @@ public class Detail_Live_Page extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
 		menu.add(3, MENU_Update, 1, "Fresh").setIcon(android.R.drawable.ic_popup_sync);
-		menu.add(3, MENU_Delete, 2, "Delete").setIcon(android.R.drawable.ic_menu_day);
+		menu.add(3, MENU_Delete, 2, "Delete").setIcon(android.R.drawable.ic_menu_delete);
 		menu.add(3, MENU_Quit, 3, "End").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
 		menu.add(3, MENU_ABOUT, 4, "About...").setIcon(android.R.drawable.ic_menu_info_details);
 		return true;
