@@ -221,7 +221,7 @@ public class Main_Page extends Activity {
              alertbBuilder.show();
             return false;  
         }  
-        return true;  
+        return false;  
     }  
 
 }
