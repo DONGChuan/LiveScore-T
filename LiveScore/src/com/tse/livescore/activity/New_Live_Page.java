@@ -15,8 +15,11 @@ import com.tse.livescore.util.HttpUtil;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -198,13 +201,44 @@ public class New_Live_Page extends Activity {
 			}
 		});
 	}
-	
-	
+		
+	protected static final int MENU_Quit = Menu.FIRST ;
+	protected static final int MENU_ABOUT = Menu.FIRST + 1 ;
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_new__live__page, menu);
+		super.onCreateOptionsMenu(menu);
+		menu.add(1, MENU_Quit, 0, "End");
+		menu.add(1, MENU_ABOUT, 0, "About...");
+		
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case MENU_ABOUT:
+			openOptionsDialog();
+			break;
+		case MENU_Quit:
+			finish();
+			break;
+		}
+		return true;
+	}
+	
+	private void openOptionsDialog() {
+
+		new AlertDialog.Builder(this).setTitle(R.string.about_title)
+				.setMessage(R.string.about_msg)
+				.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+					}
+				}).show();
 	}
 
 }

@@ -150,15 +150,14 @@ public class Main_Page extends Activity {
 	 * startActivity(intent); } }); }
 	 */
 
-	protected static final int MENU_Update = Menu.FIRST;
-	protected static final int MENU_Quit = Menu.FIRST + 1;
-	protected static final int MENU_ABOUT = Menu.FIRST + 2;
+
+	protected static final int MENU_Quit = Menu.FIRST ;
+	protected static final int MENU_ABOUT = Menu.FIRST + 1 ;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(1, MENU_Update, 0, "Fresh");
 		menu.add(1, MENU_Quit, 0, "End");
 		menu.add(1, MENU_ABOUT, 0, "About...");
 		
@@ -175,9 +174,6 @@ public class Main_Page extends Activity {
 		case MENU_Quit:
 			finish();
 			break;
-		case MENU_Update:
-			update();
-			break;
 		}
 		return true;
 	}
@@ -193,12 +189,6 @@ public class Main_Page extends Activity {
 					}
 				}).show();
 	}
-
-	private void update() {
-		// setList();
-		Toast.makeText(this, "Fresh successful", Toast.LENGTH_LONG).show();
-	}
-	
 	
 	@Override  
     public boolean onKeyDown(int keyCode, KeyEvent event) {  
