@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".Main_Page" >
-    
-      <ListView
-	        android:id="@+id/sports_listview"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/sports_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
 	
   <!--    <LinearLayout
 	    android:orientation="vertical"
