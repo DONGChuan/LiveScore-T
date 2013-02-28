@@ -70,7 +70,7 @@ public class Detail_Live_Page extends Activity {
 				layout.setBackgroundResource(R.drawable.football_background);
 			else if(live.getSportNom().equals("Rugby"))
 				layout.setBackgroundResource(R.drawable.rugby_background);
-			else if(live.getSportNom().equals("Basketball"))
+			else if(live.getSportNom().equals("Basket"))
 				layout.setBackgroundResource(R.drawable.basketball_background);
 			else
 				layout.setBackgroundResource(R.drawable.background);
