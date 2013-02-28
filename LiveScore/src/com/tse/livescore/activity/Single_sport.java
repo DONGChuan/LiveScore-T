@@ -139,15 +139,13 @@ public class Single_sport extends Activity {
 	}
 
 	protected static final int MENU_Update = Menu.FIRST;
-	protected static final int MENU_Quit = Menu.FIRST + 1;
-	protected static final int MENU_ABOUT = Menu.FIRST + 2;
+	protected static final int MENU_ABOUT = Menu.FIRST + 1;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
 		menu.add(0, MENU_Update, 0, "Mise à jour");
-		menu.add(0, MENU_Quit, 0, "Quitter");
 		menu.add(0, MENU_ABOUT, 0, "A propos...");
 		return true;
 	}
@@ -159,14 +157,11 @@ public class Single_sport extends Activity {
 		case MENU_ABOUT:
 			openOptionsDialog();
 			break;
-		case MENU_Quit:
-			System.exit(0);
-			break;
 		case MENU_Update:
 			update();
 			break;
 		}
-		return true;
+		return false;
 	}
 
 	private void openOptionsDialog() {

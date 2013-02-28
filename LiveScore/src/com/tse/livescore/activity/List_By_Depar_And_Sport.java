@@ -101,8 +101,8 @@ public class List_By_Depar_And_Sport extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_list__by__depar__and__sport,
-				menu);
+		//getMenuInflater().inflate(R.menu.activity_list__by__depar__and__sport,
+			//	menu);
 		return true;
 	}
 

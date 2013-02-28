@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    android:background="@drawable/background"
+    android:id="@+id/linearLayout"
     tools:context=".Detail_Live_Page" >
 
 		<LinearLayout 
@@ -105,10 +105,9 @@
     	    
     	    <ImageView android:id="@+id/vs"
     	        android:contentDescription="@string/vs"
-    	        android:layout_width="0dip"
+    	        android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:paddingLeft="20dp"
                 android:src="@drawable/vs"/>
 
     	</LinearLayout>
@@ -221,7 +220,8 @@
     		<ListView
         		android:id="@+id/comentaires"
         		android:layout_width="match_parent"
-        		android:layout_height="wrap_content" />
+        		android:layout_height="wrap_content" 
+        		android:background="#00000000"/>
     	</LinearLayout>
 
     

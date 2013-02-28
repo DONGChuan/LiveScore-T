@@ -27,39 +27,6 @@ public class Search_Page extends Activity {
 		setContentView(R.layout.activity_search__page);
 		initalViews();
 
-	/*	ListView list = (ListView) this.findViewById(R.id.search);
-		ArrayList<String> fonctions = new ArrayList<String>();
-		fonctions.add("liste par competition");
-		fonctions.add("liste par date");
-		fonctions.add("liste par departements et par sports");
-
-		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, fonctions);
-		list.setAdapter(arrayAdapter);
-		list.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
-				// TODO Auto-generated method stub
-				switch (arg2) {
-				case 0:
-					Intent intent0 = new Intent(Search_Page.this,
-							List_By_Competition.class);
-					startActivity(intent0);
-					break;
-				case 1:
-					Intent intent1 = new Intent(Search_Page.this,
-							List_By_Date.class);
-					startActivity(intent1);
-					break;
-				case 2:
-					Intent intent2 = new Intent(Search_Page.this,
-							List_By_Depar_And_Sport.class);
-					startActivity(intent2);
-					break;
-				}
-			}
-		});*/
 	}
 
 	private void initalViews() {

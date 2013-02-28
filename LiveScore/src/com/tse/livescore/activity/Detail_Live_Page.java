@@ -65,6 +65,17 @@ public class Detail_Live_Page extends Activity {
 	private void afficher(){
 		try {
 			live=new GetDetailLive(id);
+			View layout = this.findViewById(R.id.linearLayout);
+			if(live.getSportNom().equals("Football"))
+				layout.setBackgroundResource(R.drawable.football_background);
+			else if(live.getSportNom().equals("Rugby"))
+				layout.setBackgroundResource(R.drawable.rugby_background);
+			else if(live.getSportNom().equals("Basketball"))
+				layout.setBackgroundResource(R.drawable.basketball_background);
+			else
+				layout.setBackgroundResource(R.drawable.background);
+				
+
 			TextView tv=(TextView) this.findViewById(R.id.sport);
 			tv.setText(live.getSportNom());
 			tv=(TextView) this.findViewById(R.id.date);
@@ -140,21 +151,6 @@ public class Detail_Live_Page extends Activity {
 		
 		ImageButton e2plus1=(ImageButton)this.findViewById(R.id.e2plus1);
 		
-		e2plus1.setOnTouchListener(new OnTouchListener() {
-
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				   if(event.getAction() == MotionEvent.ACTION_DOWN){     
-					   v.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
-					    }     
-					    else if(event.getAction() == MotionEvent.ACTION_UP){     
-					    	v.setBackgroundColor(getResources().getColor(android.R.color.white));
-					    }     
-				return false;
-			}     
-				});
-
-			 
 		e2plus1.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
@@ -211,8 +207,7 @@ public class Detail_Live_Page extends Activity {
 
 	protected static final int MENU_Update = Menu.FIRST;
 	protected static final int MENU_Delete = Menu.FIRST + 1;
-	protected static final int MENU_Quit = Menu.FIRST + 2;
-	protected static final int MENU_ABOUT = Menu.FIRST + 3;
+	protected static final int MENU_ABOUT = Menu.FIRST + 2;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -220,14 +215,9 @@ public class Detail_Live_Page extends Activity {
 		super.onCreateOptionsMenu(menu);
 		menu.add(3, MENU_Update, 1, "Mise à jour").setIcon(android.R.drawable.ic_popup_sync);
 		menu.add(3, MENU_Delete, 2, "Supprimer").setIcon(android.R.drawable.ic_menu_delete);
-		menu.add(3, MENU_Quit, 3, "Quitter").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
-		menu.add(3, MENU_ABOUT, 4, "A propos...").setIcon(android.R.drawable.ic_menu_info_details);
+		menu.add(3, MENU_ABOUT, 3, "A propos...").setIcon(android.R.drawable.ic_menu_info_details);
 		return true;
 		
-		//menu.getItem(1).setIcon(android.R.drawable.ic_menu_day);
-		//menu.getItem(2).setIcon(android.R.drawable.ic_menu_day);
-		//menu.getItem(3).setIcon(android.R.drawable.ic_menu_close_clear_cancel);
-		//menu.getItem(4).setIcon(android.R.drawable.ic_menu_info_details);
 	}
 
 	@Override
@@ -236,9 +226,6 @@ public class Detail_Live_Page extends Activity {
 		switch (item.getItemId()) {
 		case MENU_ABOUT:
 			openOptionsDialog();
-			break;
-		case MENU_Quit:
-			System.exit(0);
 			break;
 		case MENU_Update:
 			update();
