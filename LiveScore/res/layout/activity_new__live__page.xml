@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="8dp"
+    android:background="@drawable/background"
     tools:context=".New_Live_Page" >
 
 <LinearLayout     
@@ -13,12 +14,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/debut" />
+        android:text="@string/debut" 
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold" />
 	<DatePicker
 	    android:id="@+id/datePicker"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content" 
-	    android:calendarViewShown="false" />
+	    android:calendarViewShown="false" 
+	    android:layout_gravity="center_horizontal"/>
 
 	<LinearLayout     
     	android:orientation="horizontal"
@@ -30,7 +34,8 @@
 	        android:layout_height="wrap_content"
 	        android:gravity="center"
 	        android:layout_weight="1"
-	        android:text="@string/sport" />
+	        android:text="@string/sport" 
+	        android:textStyle="bold"/>
 	    <Spinner 
 	        android:id="@+id/sport"
 	        android:layout_width="0dip"
@@ -48,7 +53,8 @@
 	        android:layout_height="wrap_content"
 	        android:gravity="center"
 	        android:layout_weight="1"
-	        android:text="@string/competition" />
+	        android:text="@string/competition"
+	        android:textStyle="bold" />
 	    <Spinner 
 	        android:id="@+id/competition"
 	        android:layout_width="0dip"
@@ -66,7 +72,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:gravity="center"
-	        android:text="@string/departement" />
+	        android:text="@string/departement"
+	        android:textStyle="bold" />
 	    <Spinner 
 	        android:id="@+id/departement"
 	        android:layout_width="0dip"
@@ -85,7 +92,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:gravity="center"
-	        android:text="@string/commentateur" />
+	        android:text="@string/commentateur"
+	        android:textStyle="bold" />
 	     <EditText
 	        android:id="@+id/commentateur"
 	        android:layout_width="0dip"
@@ -104,7 +112,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:gravity="center"
-	        android:text="@string/equipe1" />
+	        android:text="@string/equipe1"
+	        android:textStyle="bold" />
 	     <EditText
 	        android:id="@+id/equipe1"
 	        android:layout_width="0dip"
@@ -123,7 +132,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:gravity="center"
-	        android:text="@string/equipe2" />
+	        android:text="@string/equipe2"
+	        android:textStyle="bold" />
 	     <EditText
 	        android:id="@+id/equipe2"
 	        android:layout_width="0dip"
@@ -132,9 +142,6 @@
 	        android:hint="@string/reminder" />    
         </LinearLayout>  
  
-
-
-     
     <LinearLayout     
     	android:orientation="horizontal"
     	android:layout_width="match_parent"
@@ -145,7 +152,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:gravity="center"
-	        android:text="@string/latitude" />
+	        android:text="@string/latitude"
+	        android:textStyle="bold" />
 	     <EditText
 	        android:id="@+id/latitude"
 	        android:layout_width="0dip"
@@ -165,7 +173,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:gravity="center"
-	        android:text="@string/longitude" />
+	        android:text="@string/longitude"
+	        android:textStyle="bold" />
 	     <EditText
 	        android:id="@+id/longitude"
 	        android:layout_width="0dip"
@@ -178,7 +187,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shortDescription" />
+        android:text="@string/shortDescription"
+        android:textStyle="bold" />
      <EditText
         android:id="@+id/shortDescription"
         android:layout_width="fill_parent"
@@ -188,24 +198,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/longDescription" />
+        android:text="@string/longDescription"
+        android:textStyle="bold" />
      <EditText
         android:id="@+id/longDescription"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/reminder" />
      
-  	<LinearLayout     
-    	android:orientation="horizontal"
-    	android:layout_width="match_parent"
-   		android:layout_height="wrap_content">
+
     <Button 
         android:id="@+id/creer"
        	android:layout_width="wrap_content"
 	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/creer" />
-    </LinearLayout>
+	    android:layout_gravity="center_horizontal"
+	    android:text="@string/creer"
+	    android:textSize="25sp"
+	    android:background="#0000FF"
+	    android:textStyle="bold" />
     
 </LinearLayout>
 </ScrollView>

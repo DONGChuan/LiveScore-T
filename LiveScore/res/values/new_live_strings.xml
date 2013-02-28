@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="creer">creer</string>
-    <string name="equipe1">Equipe 1</string>
-    <string name="equipe2">Equipe 2</string>
-    <string name="competition">Competition</string>
-    <string name="departement">Departement</string>
-    <string name="latitude">Latitude</string>
-    <string name="longitude">Longitude</string>
-    <string name="shortDescription">Short Description</string>
-    <string name="longDescription">Long Description</string>
-    <string name="debut">Debut</string>
-    <string name="sport">sport</string>
+    <string name="creer">Créer</string>
+    <string name="equipe1">Equipe 1 :</string>
+    <string name="equipe2">Equipe 2 :</string>
+    <string name="competition">Competition :</string>
+    <string name="departement">Departement :</string>
+    <string name="latitude">Latitude :</string>
+    <string name="longitude">Longitude :</string>
+    <string name="shortDescription">Short Description :</string>
+    <string name="longDescription">Long Description :</string>
+    <string name="debut">Date de debut </string>
+    <string name="sport">Sport :</string>
     <string name="reminder">saisir</string>
 </resources>

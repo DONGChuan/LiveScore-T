@@ -87,9 +87,9 @@ public class Single_sport extends Activity {
 				public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
 						final int arg2, long arg3) {
 
-					new AlertDialog.Builder(Single_sport.this).setTitle(R.string.about_title)
-					.setMessage(R.string.about_msg)
-					.setPositiveButton("Yes",
+					new AlertDialog.Builder(Single_sport.this).setTitle(R.string.about_title_delete)
+					.setMessage(R.string.about_delete)
+					.setPositiveButton("Oui",
 							new DialogInterface.OnClickListener(){
 								@Override
 								public void onClick(DialogInterface dialog, int which){
@@ -101,7 +101,7 @@ public class Single_sport extends Activity {
 										e.printStackTrace();
 									}
 								}
-						}).setNegativeButton("No",
+						}).setNegativeButton("Non",
 							new DialogInterface.OnClickListener() {
 								@Override
 								public void onClick(DialogInterface dialog, int which){
@@ -146,9 +146,9 @@ public class Single_sport extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, MENU_Update, 0, "Fresh");
-		menu.add(0, MENU_Quit, 0, "End");
-		menu.add(0, MENU_ABOUT, 0, "About...");
+		menu.add(0, MENU_Update, 0, "Mise à jour");
+		menu.add(0, MENU_Quit, 0, "Quitter");
+		menu.add(0, MENU_ABOUT, 0, "A propos...");
 		return true;
 	}
 
@@ -160,7 +160,7 @@ public class Single_sport extends Activity {
 			openOptionsDialog();
 			break;
 		case MENU_Quit:
-			finish();
+			System.exit(0);
 			break;
 		case MENU_Update:
 			update();
@@ -183,7 +183,7 @@ public class Single_sport extends Activity {
 
 	private void update() {
 		initaldata();
-		Toast.makeText(this, "Fresh successful", Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "Mise à jour réussie", Toast.LENGTH_LONG).show();
 	}
 
 }

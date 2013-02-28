@@ -110,7 +110,7 @@ public class New_Live_Page extends Activity {
 	private void competition(){
 		try {
 			glc=new GetListeCompetitions();
-			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,glc.getListe());
+			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,glc.getListe());
 			Spinner spinner=(Spinner) this.findViewById(R.id.competition);
 			spinner.setAdapter(arrayAdapter);
 			spinner.setOnItemSelectedListener(new OnItemSelectedListener(){
@@ -132,7 +132,7 @@ public class New_Live_Page extends Activity {
 	private void sport(){
 		try {
 			gls=new GetListeSports();
-			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,gls.getListe());
+			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,gls.getListe());
 			Spinner spinner=(Spinner) this.findViewById(R.id.sport);
 			spinner.setAdapter(arrayAdapter);
 			spinner.setOnItemSelectedListener(new OnItemSelectedListener(){
@@ -154,7 +154,7 @@ public class New_Live_Page extends Activity {
 	private void departement(){
 		try {
 			gld=new GetListeDepartements();
-			ArrayAdapter<String> arrayAdapter2=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,gld.getListe());
+			ArrayAdapter<String> arrayAdapter2=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,gld.getListe());
 			Spinner sp2=(Spinner) this.findViewById(R.id.departement);
 			sp2.setAdapter(arrayAdapter2);
 			sp2.setOnItemSelectedListener(new OnItemSelectedListener(){
@@ -197,8 +197,8 @@ public class New_Live_Page extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(1, MENU_Quit, 0, "End");
-		menu.add(1, MENU_ABOUT, 0, "About...");
+		menu.add(1, MENU_Quit, 0, "Quitter");
+		menu.add(1, MENU_ABOUT, 0, "A propos...");
 		
 		return true;
 	}
@@ -211,7 +211,7 @@ public class New_Live_Page extends Activity {
 			openOptionsDialog();
 			break;
 		case MENU_Quit:
-			finish();
+			System.exit(0);
 			break;
 		}
 		return true;

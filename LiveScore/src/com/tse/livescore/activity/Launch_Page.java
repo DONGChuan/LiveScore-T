@@ -7,25 +7,30 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class Launch_Page extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  
+			    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_launch__page);
 		
-		final Intent it = new Intent(this, Tab_Page.class); //ÄãÒª×ªÏòµÄActivity
+		final Intent it = new Intent(this, Tab_Page.class); //ï¿½ï¿½Òª×ªï¿½ï¿½ï¿½Activity
 		  
 		Timer timer = new Timer();
 		TimerTask task = new TimerTask() {
 			@Override
 			public void run() {
-				startActivity(it); //Ö´ÐÐ
+				startActivity(it); //Ö´ï¿½ï¿½
 				Launch_Page.this.finish();
 			}
 		};
-		timer.schedule(task, 1000 * 3); //3Ãëºó
+		timer.schedule(task, 1000 * 3); //3ï¿½ï¿½ï¿½
 	}
 
 	@Override

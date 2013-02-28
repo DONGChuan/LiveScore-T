@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".List_By_Depar_And_Sport" >
     
     <LinearLayout 
@@ -13,16 +14,20 @@
         	android:id="@+id/sports"
         	android:layout_width="0dip"
         	android:layout_height="wrap_content"
-        	android:layout_weight="1"/>
+        	android:layout_weight="1"
+        	android:layout_gravity="center_vertical"/>
     
    		<Spinner 
         	android:id="@+id/departements"
         	android:layout_width="0dip"
         	android:layout_height="wrap_content"
-        	android:layout_weight="1"/>
+        	android:layout_weight="1"
+        	android:layout_gravity="center_vertical"/>
     
-    	<Button
+    	<ImageButton
         	android:id="@+id/button"
+        	android:src="@android:drawable/ic_menu_search"
+	        android:paddingRight="10dp"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:text="@string/rechercher" />

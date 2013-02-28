@@ -123,8 +123,8 @@ public class Search_Page extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(1, MENU_Quit, 0, "End").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
-		menu.add(1, MENU_ABOUT, 0, "About...").setIcon(android.R.drawable.ic_menu_info_details);
+		menu.add(1, MENU_Quit, 0, "Quitter").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		menu.add(1, MENU_ABOUT, 0, "A propos...").setIcon(android.R.drawable.ic_menu_info_details);
 		return true;	
 	}
 
@@ -136,7 +136,7 @@ public class Search_Page extends Activity {
 			openOptionsDialog();
 			break;
 		case MENU_Quit:
-			finish();
+			System.exit(0);
 			break;
 		}
 		return true;

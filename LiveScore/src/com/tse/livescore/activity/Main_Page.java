@@ -85,7 +85,7 @@ public class Main_Page extends Activity {
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("title", "football");
+		map.put("title", "Football");
 		map.put("img", R.drawable.football);
 		list.add(map);
 
@@ -154,8 +154,8 @@ public class Main_Page extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(1, MENU_Quit, 0, "End").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
-		menu.add(1, MENU_ABOUT, 0, "About...").setIcon(android.R.drawable.ic_menu_info_details);		
+		menu.add(1, MENU_Quit, 0, "Quitter").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		menu.add(1, MENU_ABOUT, 0, "A propos ...").setIcon(android.R.drawable.ic_menu_info_details);		
 		return true;
 	}
 
@@ -167,7 +167,7 @@ public class Main_Page extends Activity {
 			openOptionsDialog();
 			break;
 		case MENU_Quit:
-			finish();
+			System.exit(0);
 			break;
 		}
 		return true;
@@ -189,7 +189,7 @@ public class Main_Page extends Activity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {  
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {  
         	 AlertDialog.Builder alertbBuilder=new AlertDialog.Builder(this);
-             alertbBuilder.setMessage("Vous voulez vraiment quiter?").setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+             alertbBuilder.setMessage("Vous voulez vraiment quitter?").setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                      
                      @Override
                      public void onClick(DialogInterface dialog, int which) {

@@ -13,8 +13,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +36,7 @@ public class Detail_Live_Page extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_detail__live__page);
 		
 		Intent intent=getIntent();
@@ -135,6 +139,22 @@ public class Detail_Live_Page extends Activity {
 		});
 		
 		ImageButton e2plus1=(ImageButton)this.findViewById(R.id.e2plus1);
+		
+		e2plus1.setOnTouchListener(new OnTouchListener() {
+
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				   if(event.getAction() == MotionEvent.ACTION_DOWN){     
+					   v.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
+					    }     
+					    else if(event.getAction() == MotionEvent.ACTION_UP){     
+					    	v.setBackgroundColor(getResources().getColor(android.R.color.white));
+					    }     
+				return false;
+			}     
+				});
+
+			 
 		e2plus1.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
@@ -198,10 +218,10 @@ public class Detail_Live_Page extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
-		menu.add(3, MENU_Update, 1, "Fresh").setIcon(android.R.drawable.ic_popup_sync);
-		menu.add(3, MENU_Delete, 2, "Delete").setIcon(android.R.drawable.ic_menu_delete);
-		menu.add(3, MENU_Quit, 3, "End").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
-		menu.add(3, MENU_ABOUT, 4, "About...").setIcon(android.R.drawable.ic_menu_info_details);
+		menu.add(3, MENU_Update, 1, "Mise à jour").setIcon(android.R.drawable.ic_popup_sync);
+		menu.add(3, MENU_Delete, 2, "Supprimer").setIcon(android.R.drawable.ic_menu_delete);
+		menu.add(3, MENU_Quit, 3, "Quitter").setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		menu.add(3, MENU_ABOUT, 4, "A propos...").setIcon(android.R.drawable.ic_menu_info_details);
 		return true;
 		
 		//menu.getItem(1).setIcon(android.R.drawable.ic_menu_day);
@@ -218,7 +238,7 @@ public class Detail_Live_Page extends Activity {
 			openOptionsDialog();
 			break;
 		case MENU_Quit:
-			finish();
+			System.exit(0);
 			break;
 		case MENU_Update:
 			update();
@@ -226,7 +246,7 @@ public class Detail_Live_Page extends Activity {
 		case MENU_Delete:
 			delete();
 			finish();
-			Toast.makeText(this, "Delete successful,Please fresh", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Suppression réussie, mettre à jour svp", Toast.LENGTH_LONG).show();
 			break;
 		}
 		return true;
@@ -257,7 +277,7 @@ public class Detail_Live_Page extends Activity {
 
 	private void update() {
 		maj();
-		Toast.makeText(this, "Fresh successful", Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "Mise à jour réussie", Toast.LENGTH_LONG).show();
 	}
 
 }

@@ -1,8 +1,6 @@
 package com.tse.livescore.activity;
 
 
-import org.json.JSONException;
-
 import com.tse.livescore.util.GetListeCompetitions;
 import com.tse.livescore.util.GetLivesByCompetition;
 
@@ -14,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemClickListener;
@@ -30,7 +29,7 @@ public class List_By_Competition extends Activity {
 		
 		try {
 			glc=new GetListeCompetitions();
-			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,glc.getListe());
+			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,glc.getListe());
 			Spinner spinner=(Spinner) this.findViewById(R.id.competitions);
 			spinner.setAdapter(arrayAdapter);
 			spinner.setOnItemSelectedListener(new OnItemSelectedListener(){
@@ -50,7 +49,7 @@ public class List_By_Competition extends Activity {
 			}
 			
 		
-		Button bn=(Button)this.findViewById(R.id.button);
+		ImageButton bn=(ImageButton)this.findViewById(R.id.button);
 		bn.setOnClickListener(new Button.OnClickListener(){
 			GetLivesByCompetition lives;
 			@Override

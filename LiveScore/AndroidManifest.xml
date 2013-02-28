@@ -35,7 +35,6 @@
         <activity
             android:name="com.tse.livescore.activity.Detail_Live_Page"
             android:label="@string/title_activity_detail__live__page"
-            android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity

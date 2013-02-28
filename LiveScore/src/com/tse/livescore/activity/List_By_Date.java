@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.DatePicker.OnDateChangedListener;
@@ -45,7 +46,7 @@ public class List_By_Date extends Activity {
 		});
 		
 		
-		Button bn=(Button)this.findViewById(R.id.button);
+		ImageButton bn=(ImageButton)this.findViewById(R.id.button);
 		bn.setOnClickListener(new Button.OnClickListener(){
 			GetLivesByDate lives;
 			@Override

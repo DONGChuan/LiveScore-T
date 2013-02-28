@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".List_By_Date" >
     
 	<LinearLayout 
@@ -17,8 +18,10 @@
 		    android:layout_weight="1"
 		    android:calendarViewShown="false" />
 		
-	    <Button
+	    <ImageButton
 	        android:id="@+id/button"
+	        android:src="@android:drawable/ic_menu_search"
+	        android:paddingRight="10dp"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_weight="0"

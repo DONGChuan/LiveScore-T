@@ -5,11 +5,10 @@
     <string name="basketball">Basketball</string>
     <string name="rugby">Rugby</string>
     
-    <string name="about_title" >About LiveScore</string>
-	<string name="about_msg" >Android LiveScore\n
-	DONG Chuan gasolin\n\n gasolin+android [at] dongchuan55@gmail.com</string>
+    <string name="about_title" >A propos de LiveScore</string>
+	<string name="about_msg" >Développé par DONG Chuan, LI Shuopeng, LIU Xin, LIANG Yaohua</string>
 	
-	<string name="warning" >Warning : </string>
-	<string name="internet_error" >No internet!</string>
+	<string name="warning" >Attention : </string>
+	<string name="internet_error" >Pas de connexion!</string>
 
 </resources>

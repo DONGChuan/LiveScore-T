@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="list">List</string>
-    <string name="search">Search</string>
-    <string name="add">Add</string>
-	<string name="update">Update</string>
+    <string name="list">Liste</string>
+    <string name="search">Rechercher</string>
+    <string name="add">Ajouter</string>
+	<string name="update">Mise à jour</string>
 	
 </resources>

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".Detail_Live_Page" >
 
 		<LinearLayout 
@@ -61,7 +62,9 @@
                 android:layout_weight="5"
                 android:gravity="center" 
                 android:layout_gravity="center"
-                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#FFFF00"
+              	 android:textSize="25sp"
                 android:text="@string/nom"/>
             
             <TextView android:id="@+id/score1"
@@ -71,24 +74,28 @@
                 android:gravity="center" 
                 android:layout_gravity="center"
                 android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
                 android:text="@string/nom"/>
             
             <ImageButton
                 android:id="@+id/e1plus1"
-                android:background="#fff000"
+                android:background="#00000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:contentDescription="@string/plus"
-                android:src="@drawable/plus" />
+                android:src="@drawable/plus"
+                android:paddingRight="20dp" />
             
             <ImageButton android:id="@+id/e1moins1"
-                android:background="#fff000"
+                android:background="#00000000"
                 android:contentDescription="@string/moins"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" 
                 android:layout_weight="0"
-                android:src="@drawable/moins"/>
+                android:src="@drawable/moins"
+                android:paddingRight="20dp" />
        	</LinearLayout>
        	
     	<LinearLayout android:id="@+id/widget5"
@@ -119,6 +126,8 @@
                 android:textSize="25sp"
                 android:gravity="center" 
                 android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#0000FF"
                 android:text="@string/nom"/>
             
             <TextView android:id="@+id/score2"
@@ -128,25 +137,29 @@
                 android:textSize="25sp"
                 android:gravity="center"
                 android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
                 android:text="@string/nom" />
             
             <ImageButton android:id="@+id/e2plus1"
-                android:background="#fff000"
+                android:background="#00000000"
                 android:contentDescription="@string/plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" 
                 android:layout_weight="0"
                 android:gravity="center"
-                android:src="@drawable/plus" />
+                android:src="@drawable/plus"
+                android:paddingRight="20dp" />
             
             <ImageButton android:id="@+id/e2moins1"
-                android:background="#fff000"
+                android:background="#00000000"
                 android:contentDescription="@string/moins"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" 
                 android:layout_weight="0"
                 android:gravity="center"
-                android:src="@drawable/moins"/>
+                android:src="@drawable/moins"
+                android:paddingRight="20dp"/>
        	</LinearLayout>
        	
     	<TextView android:id="@+id/shortDes"

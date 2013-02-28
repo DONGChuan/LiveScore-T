@@ -29,9 +29,9 @@ public class Tab_Page extends TabActivity {
         Intent newLive=new Intent(this,New_Live_Page.class);
         Intent search=new Intent(this,Search_Page.class);
         
-        mTabHost.addTab(mTabHost.newTabSpec("tab_test1").setIndicator("List").setContent(it));  
-        mTabHost.addTab(mTabHost.newTabSpec("tab_test2").setIndicator("Search").setContent(search)); 
-        mTabHost.addTab(mTabHost.newTabSpec("tab_test3").setIndicator("New").setContent(newLive));  
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test1").setIndicator("Liste").setContent(it));  
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test2").setIndicator("Rechercher").setContent(search)); 
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test3").setIndicator("Créer").setContent(newLive));  
     }
 
 

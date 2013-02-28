@@ -1,8 +1,6 @@
 package com.tse.livescore.activity;
 
 
-import org.json.JSONException;
-
 import com.tse.livescore.util.GetListeDepartements;
 import com.tse.livescore.util.GetListeSports;
 import com.tse.livescore.util.GetLivesByDepartAndSport;
@@ -16,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemClickListener;
@@ -34,7 +33,7 @@ public class List_By_Depar_And_Sport extends Activity {
 		
 		try {
 			gls=new GetListeSports();
-			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,gls.getListe());
+			ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,gls.getListe());
 			Spinner spinner=(Spinner) this.findViewById(R.id.sports);
 			spinner.setAdapter(arrayAdapter);
 			spinner.setOnItemSelectedListener(new OnItemSelectedListener(){
@@ -51,7 +50,7 @@ public class List_By_Depar_And_Sport extends Activity {
 			});
 			
 			gld=new GetListeDepartements();
-			ArrayAdapter<String> arrayAdapter2=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,gld.getListe());
+			ArrayAdapter<String> arrayAdapter2=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,gld.getListe());
 			Spinner sp2=(Spinner) this.findViewById(R.id.departements);
 			sp2.setAdapter(arrayAdapter2);
 			sp2.setOnItemSelectedListener(new OnItemSelectedListener(){
@@ -69,7 +68,7 @@ public class List_By_Depar_And_Sport extends Activity {
 			e.printStackTrace();
 		}
 		
-		Button bn=(Button)this.findViewById(R.id.button);
+		ImageButton bn=(ImageButton)this.findViewById(R.id.button);
 		bn.setOnClickListener(new Button.OnClickListener(){
 			GetLivesByDepartAndSport lives;
 			@Override
