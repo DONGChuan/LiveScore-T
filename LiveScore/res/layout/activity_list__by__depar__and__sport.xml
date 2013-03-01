@@ -41,7 +41,8 @@
     	<ListView
         	android:id="@+id/lives"
         	android:layout_width="match_parent"
-        	android:layout_height="wrap_content" />
+        	android:layout_height="wrap_content" 
+        	android:cacheColorHint="#00000000"/>
     	
     </LinearLayout>
     
